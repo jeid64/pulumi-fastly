@@ -25,17 +25,17 @@ func TestExamples(t *testing.T) {
 	// }
 
 	// base options shared amongst all tests.
-	base := integration.ProgramTestOptions{
-		Config: map[string]string{
-			// Configuration map
-		},
-		Tracing: "https://tracing.pulumi-engineering.com/collector/api/v1/spans",
-	}
-	baseJS := base.With(integration.ProgramTestOptions{
-		Dependencies: []string{
-			// JavaScript dependencies
-		},
-	})
+	//base := integration.ProgramTestOptions{
+	//	Config: map[string]string{
+	// Configuration map
+	//	},
+	//	Tracing: "https://tracing.pulumi-engineering.com/collector/api/v1/spans",
+	//}
+	//baseJS := base.With(integration.ProgramTestOptions{
+	//	Dependencies: []string{
+	//		// JavaScript dependencies
+	//	},
+	//})
 
 	examples := []integration.ProgramTestOptions{
 		// List each test
