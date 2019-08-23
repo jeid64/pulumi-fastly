@@ -11,7 +11,7 @@ for pkg in __all__:
 
 # Export this package's modules as members:
 from .service_acl_entriesv1 import *
-from .service_dictionary_itmesv1 import *
+from .service_dictionary_itemsv1 import *
 from .service_dynamic_snippet_contentv1 import *
 from .servicev1 import *
 from .get_fastly_ip_ranges import *

@@ -9,7 +9,7 @@ import pulumi.runtime
 from typing import Union
 from . import utilities, tables
 
-class ServiceDictionaryItmesv1(pulumi.CustomResource):
+class ServiceDictionaryItemsv1(pulumi.CustomResource):
     dictionary_id: pulumi.Output[str]
     """
     The ID of the dictionary that the items belong to
@@ -24,7 +24,7 @@ class ServiceDictionaryItmesv1(pulumi.CustomResource):
     """
     def __init__(__self__, resource_name, opts=None, dictionary_id=None, items=None, service_id=None, __props__=None, __name__=None, __opts__=None):
         """
-        Create a ServiceDictionaryItmesv1 resource with the given unique name, props, and options.
+        Create a ServiceDictionaryItemsv1 resource with the given unique name, props, and options.
         
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -58,8 +58,8 @@ class ServiceDictionaryItmesv1(pulumi.CustomResource):
             if service_id is None:
                 raise TypeError("Missing required property 'service_id'")
             __props__['service_id'] = service_id
-        super(ServiceDictionaryItmesv1, __self__).__init__(
-            'fastly:index/serviceDictionaryItmesv1:ServiceDictionaryItmesv1',
+        super(ServiceDictionaryItemsv1, __self__).__init__(
+            'fastly:index/serviceDictionaryItemsv1:ServiceDictionaryItemsv1',
             resource_name,
             __props__,
             opts)
@@ -67,7 +67,7 @@ class ServiceDictionaryItmesv1(pulumi.CustomResource):
     @staticmethod
     def get(resource_name, id, opts=None, dictionary_id=None, items=None, service_id=None):
         """
-        Get an existing ServiceDictionaryItmesv1 resource's state with the given name, id, and optional extra
+        Get an existing ServiceDictionaryItemsv1 resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
         :param str resource_name: The unique name of the resulting resource.
         :param str id: The unique provider ID of the resource to lookup.
@@ -84,7 +84,7 @@ class ServiceDictionaryItmesv1(pulumi.CustomResource):
         __props__["dictionary_id"] = dictionary_id
         __props__["items"] = items
         __props__["service_id"] = service_id
-        return ServiceDictionaryItmesv1(resource_name, opts=opts, __props__=__props__)
+        return ServiceDictionaryItemsv1(resource_name, opts=opts, __props__=__props__)
     def translate_output_property(self, prop):
         return tables._CAMEL_TO_SNAKE_CASE_TABLE.get(prop) or prop
 

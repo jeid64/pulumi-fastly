@@ -9,31 +9,31 @@ import * as utilities from "./utilities";
 /**
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-fastly/blob/master/website/docs/r/service_dictionary_items_v1.html.markdown.
  */
-export class ServiceDictionaryItmesv1 extends pulumi.CustomResource {
+export class ServiceDictionaryItemsv1 extends pulumi.CustomResource {
     /**
-     * Get an existing ServiceDictionaryItmesv1 resource's state with the given name, ID, and optional extra
+     * Get an existing ServiceDictionaryItemsv1 resource's state with the given name, ID, and optional extra
      * properties used to qualify the lookup.
      *
      * @param name The _unique_ name of the resulting resource.
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param state Any extra arguments used during the lookup.
      */
-    public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ServiceDictionaryItmesv1State, opts?: pulumi.CustomResourceOptions): ServiceDictionaryItmesv1 {
-        return new ServiceDictionaryItmesv1(name, <any>state, { ...opts, id: id });
+    public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ServiceDictionaryItemsv1State, opts?: pulumi.CustomResourceOptions): ServiceDictionaryItemsv1 {
+        return new ServiceDictionaryItemsv1(name, <any>state, { ...opts, id: id });
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'fastly:index/serviceDictionaryItmesv1:ServiceDictionaryItmesv1';
+    public static readonly __pulumiType = 'fastly:index/serviceDictionaryItemsv1:ServiceDictionaryItemsv1';
 
     /**
-     * Returns true if the given object is an instance of ServiceDictionaryItmesv1.  This is designed to work even
+     * Returns true if the given object is an instance of ServiceDictionaryItemsv1.  This is designed to work even
      * when multiple copies of the Pulumi SDK have been loaded into the same process.
      */
-    public static isInstance(obj: any): obj is ServiceDictionaryItmesv1 {
+    public static isInstance(obj: any): obj is ServiceDictionaryItemsv1 {
         if (obj === undefined || obj === null) {
             return false;
         }
-        return obj['__pulumiType'] === ServiceDictionaryItmesv1.__pulumiType;
+        return obj['__pulumiType'] === ServiceDictionaryItemsv1.__pulumiType;
     }
 
     /**
@@ -50,22 +50,22 @@ export class ServiceDictionaryItmesv1 extends pulumi.CustomResource {
     public readonly serviceId!: pulumi.Output<string>;
 
     /**
-     * Create a ServiceDictionaryItmesv1 resource with the given unique name, arguments, and options.
+     * Create a ServiceDictionaryItemsv1 resource with the given unique name, arguments, and options.
      *
      * @param name The _unique_ name of the resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param opts A bag of options that control this resource's behavior.
      */
-    constructor(name: string, args: ServiceDictionaryItmesv1Args, opts?: pulumi.CustomResourceOptions)
-    constructor(name: string, argsOrState?: ServiceDictionaryItmesv1Args | ServiceDictionaryItmesv1State, opts?: pulumi.CustomResourceOptions) {
+    constructor(name: string, args: ServiceDictionaryItemsv1Args, opts?: pulumi.CustomResourceOptions)
+    constructor(name: string, argsOrState?: ServiceDictionaryItemsv1Args | ServiceDictionaryItemsv1State, opts?: pulumi.CustomResourceOptions) {
         let inputs: pulumi.Inputs = {};
         if (opts && opts.id) {
-            const state = argsOrState as ServiceDictionaryItmesv1State | undefined;
+            const state = argsOrState as ServiceDictionaryItemsv1State | undefined;
             inputs["dictionaryId"] = state ? state.dictionaryId : undefined;
             inputs["items"] = state ? state.items : undefined;
             inputs["serviceId"] = state ? state.serviceId : undefined;
         } else {
-            const args = argsOrState as ServiceDictionaryItmesv1Args | undefined;
+            const args = argsOrState as ServiceDictionaryItemsv1Args | undefined;
             if (!args || args.dictionaryId === undefined) {
                 throw new Error("Missing required property 'dictionaryId'");
             }
@@ -83,14 +83,14 @@ export class ServiceDictionaryItmesv1 extends pulumi.CustomResource {
         if (!opts.version) {
             opts.version = utilities.getVersion();
         }
-        super(ServiceDictionaryItmesv1.__pulumiType, name, inputs, opts);
+        super(ServiceDictionaryItemsv1.__pulumiType, name, inputs, opts);
     }
 }
 
 /**
- * Input properties used for looking up and filtering ServiceDictionaryItmesv1 resources.
+ * Input properties used for looking up and filtering ServiceDictionaryItemsv1 resources.
  */
-export interface ServiceDictionaryItmesv1State {
+export interface ServiceDictionaryItemsv1State {
     /**
      * The ID of the dictionary that the items belong to
      */
@@ -106,9 +106,9 @@ export interface ServiceDictionaryItmesv1State {
 }
 
 /**
- * The set of arguments for constructing a ServiceDictionaryItmesv1 resource.
+ * The set of arguments for constructing a ServiceDictionaryItemsv1 resource.
  */
-export interface ServiceDictionaryItmesv1Args {
+export interface ServiceDictionaryItemsv1Args {
     /**
      * The ID of the dictionary that the items belong to
      */

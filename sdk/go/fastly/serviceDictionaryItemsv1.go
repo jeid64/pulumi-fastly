@@ -9,13 +9,13 @@ import (
 )
 
 // > This content is derived from https://github.com/terraform-providers/terraform-provider-fastly/blob/master/website/docs/r/service_dictionary_items_v1.html.markdown.
-type ServiceDictionaryItmesv1 struct {
+type ServiceDictionaryItemsv1 struct {
 	s *pulumi.ResourceState
 }
 
-// NewServiceDictionaryItmesv1 registers a new resource with the given unique name, arguments, and options.
-func NewServiceDictionaryItmesv1(ctx *pulumi.Context,
-	name string, args *ServiceDictionaryItmesv1Args, opts ...pulumi.ResourceOpt) (*ServiceDictionaryItmesv1, error) {
+// NewServiceDictionaryItemsv1 registers a new resource with the given unique name, arguments, and options.
+func NewServiceDictionaryItemsv1(ctx *pulumi.Context,
+	name string, args *ServiceDictionaryItemsv1Args, opts ...pulumi.ResourceOpt) (*ServiceDictionaryItemsv1, error) {
 	if args == nil || args.DictionaryId == nil {
 		return nil, errors.New("missing required argument 'DictionaryId'")
 	}
@@ -32,57 +32,57 @@ func NewServiceDictionaryItmesv1(ctx *pulumi.Context,
 		inputs["items"] = args.Items
 		inputs["serviceId"] = args.ServiceId
 	}
-	s, err := ctx.RegisterResource("fastly:index/serviceDictionaryItmesv1:ServiceDictionaryItmesv1", name, true, inputs, opts...)
+	s, err := ctx.RegisterResource("fastly:index/serviceDictionaryItemsv1:ServiceDictionaryItemsv1", name, true, inputs, opts...)
 	if err != nil {
 		return nil, err
 	}
-	return &ServiceDictionaryItmesv1{s: s}, nil
+	return &ServiceDictionaryItemsv1{s: s}, nil
 }
 
-// GetServiceDictionaryItmesv1 gets an existing ServiceDictionaryItmesv1 resource's state with the given name, ID, and optional
+// GetServiceDictionaryItemsv1 gets an existing ServiceDictionaryItemsv1 resource's state with the given name, ID, and optional
 // state properties that are used to uniquely qualify the lookup (nil if not required).
-func GetServiceDictionaryItmesv1(ctx *pulumi.Context,
-	name string, id pulumi.ID, state *ServiceDictionaryItmesv1State, opts ...pulumi.ResourceOpt) (*ServiceDictionaryItmesv1, error) {
+func GetServiceDictionaryItemsv1(ctx *pulumi.Context,
+	name string, id pulumi.ID, state *ServiceDictionaryItemsv1State, opts ...pulumi.ResourceOpt) (*ServiceDictionaryItemsv1, error) {
 	inputs := make(map[string]interface{})
 	if state != nil {
 		inputs["dictionaryId"] = state.DictionaryId
 		inputs["items"] = state.Items
 		inputs["serviceId"] = state.ServiceId
 	}
-	s, err := ctx.ReadResource("fastly:index/serviceDictionaryItmesv1:ServiceDictionaryItmesv1", name, id, inputs, opts...)
+	s, err := ctx.ReadResource("fastly:index/serviceDictionaryItemsv1:ServiceDictionaryItemsv1", name, id, inputs, opts...)
 	if err != nil {
 		return nil, err
 	}
-	return &ServiceDictionaryItmesv1{s: s}, nil
+	return &ServiceDictionaryItemsv1{s: s}, nil
 }
 
 // URN is this resource's unique name assigned by Pulumi.
-func (r *ServiceDictionaryItmesv1) URN() *pulumi.URNOutput {
+func (r *ServiceDictionaryItemsv1) URN() *pulumi.URNOutput {
 	return r.s.URN()
 }
 
 // ID is this resource's unique identifier assigned by its provider.
-func (r *ServiceDictionaryItmesv1) ID() *pulumi.IDOutput {
+func (r *ServiceDictionaryItemsv1) ID() *pulumi.IDOutput {
 	return r.s.ID()
 }
 
 // The ID of the dictionary that the items belong to
-func (r *ServiceDictionaryItmesv1) DictionaryId() *pulumi.StringOutput {
+func (r *ServiceDictionaryItemsv1) DictionaryId() *pulumi.StringOutput {
 	return (*pulumi.StringOutput)(r.s.State["dictionaryId"])
 }
 
 // A map representing an entry in the dictionary, (key/value)
-func (r *ServiceDictionaryItmesv1) Items() *pulumi.MapOutput {
+func (r *ServiceDictionaryItemsv1) Items() *pulumi.MapOutput {
 	return (*pulumi.MapOutput)(r.s.State["items"])
 }
 
 // The ID of the service that the dictionary belongs to
-func (r *ServiceDictionaryItmesv1) ServiceId() *pulumi.StringOutput {
+func (r *ServiceDictionaryItemsv1) ServiceId() *pulumi.StringOutput {
 	return (*pulumi.StringOutput)(r.s.State["serviceId"])
 }
 
-// Input properties used for looking up and filtering ServiceDictionaryItmesv1 resources.
-type ServiceDictionaryItmesv1State struct {
+// Input properties used for looking up and filtering ServiceDictionaryItemsv1 resources.
+type ServiceDictionaryItemsv1State struct {
 	// The ID of the dictionary that the items belong to
 	DictionaryId interface{}
 	// A map representing an entry in the dictionary, (key/value)
@@ -91,8 +91,8 @@ type ServiceDictionaryItmesv1State struct {
 	ServiceId interface{}
 }
 
-// The set of arguments for constructing a ServiceDictionaryItmesv1 resource.
-type ServiceDictionaryItmesv1Args struct {
+// The set of arguments for constructing a ServiceDictionaryItemsv1 resource.
+type ServiceDictionaryItemsv1Args struct {
 	// The ID of the dictionary that the items belong to
 	DictionaryId interface{}
 	// A map representing an entry in the dictionary, (key/value)

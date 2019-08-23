@@ -135,7 +135,7 @@ func Provider() tfbridge.ProviderInfo {
 			// },
 			"fastly_service_v1":                         {Tok: makeResource(mainMod, "Servicev1")},
 			"fastly_service_acl_entries_v1":             {Tok: makeResource(mainMod, "ServiceACLEntriesv1")},
-			"fastly_service_dictionary_items_v1":        {Tok: makeResource(mainMod, "ServiceDictionaryItmesv1")},
+			"fastly_service_dictionary_items_v1":        {Tok: makeResource(mainMod, "ServiceDictionaryItemsv1")},
 			"fastly_service_dynamic_snippet_content_v1": {Tok: makeResource(mainMod, "ServiceDynamicSnippetContentv1")},
 		},
 		DataSources: map[string]*tfbridge.DataSourceInfo{
